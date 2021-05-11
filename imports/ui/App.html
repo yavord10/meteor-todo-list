@@ -9,6 +9,15 @@
         </header>
         
         {{> form }}
+        <div class="filter">
+            <button id="hide-completed-button">
+                {{#if hideCompleted}}
+                        Show All
+                {{else}}
+                        Hide Completed
+                {{/if}}
+            </button>
+        </div>
 
         <ul>
             {{#each tasks}}
@@ -16,10 +25,6 @@
             {{/each}}
         </ul>
     </div>
-</template>
-
-<template name="task">
-    <li>{{text}}</li>
 </template>
 
 <template name="form">
